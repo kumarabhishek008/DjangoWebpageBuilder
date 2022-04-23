@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="//unpkg.com/grapesjs/dist/css/grapes.min.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="//unpkg.com/grapesjs"></script>
+    <style>
+        /* Let's highlight canvas boundaries */
+        #gjs {
+            border: 3px solid #444;
+        }
+        
+        /* Reset some default styling */
+        .gjs-cv-canvas {
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    {% block content %}
+
+    {% endblock %}
+</body>
+</html>
