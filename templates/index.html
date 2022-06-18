@@ -444,6 +444,24 @@
   function saveContent(e){
     e.preventDefault()
     console.log(editor.getHtml(), editor.getCss());
+    const formData = new FormData()
+    formData.append('html', editor.getHtml());
+    formData.append('css', editor.getCss());
+    const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+    const request = new Request(
+    'page/create',
+      {
+          method: 'POST',
+          headers: {'X-CSRFToken': csrftoken},
+          mode: 'same-origin', // Do not send CSRF token to another domain.
+          body: formData
+      }
+    );
+    fetch(request).then((resp)=>resp.json()).then((response)=>{
+      console.log(response)
+    }).catch((error)=>{
+      console.log(error)
+    })
   }
   
 </script>
