@@ -34,3 +34,7 @@ def editPageContent(request, id):
         page.css = css
         page.save()
     return JsonResponse({ "result" : (json.loads(serialize('json', [page])))[0]})    
+
+def previewPage(request, id):
+    page = Pages.objects.get(pk=id)
+    return render(request, 'preview.html', {"page": page})

@@ -6,4 +6,5 @@ class Pages(models.Model):
     description = models.CharField(max_length=100)
     html = models.TextField()
     css = models.TextField()
+    preview_link = models.TextField()
 
