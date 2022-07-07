@@ -33,4 +33,4 @@ def editPageContent(request, id):
         page.html = html
         page.css = css
         page.save()
-    return JsonResponse({ "result" : (json.loads(serialize('json', [page])))[0]})     
+    return JsonResponse({ "result" : (json.loads(serialize('json', [page])))[0]})    

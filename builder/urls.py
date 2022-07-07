@@ -6,5 +6,5 @@ urlpatterns = [
     path('add', views.addPage, name="addpage"),
     path('edit/<id>', views.editPage, name="editpage"),
     path('page/create', views.savePage, name="create_page"),
-    path('editPage/<id>', views.editPageContent, name="editPageContent")
+    path('editPage/<id>', views.editPageContent, name="editPageContent"),
 ]
